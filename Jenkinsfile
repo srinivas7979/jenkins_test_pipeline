@@ -10,6 +10,7 @@ pipeline {
             steps {
                echo "Hello this is jenkins pipeline"
                sh 'mkdir /tmp/hello'
+               sh 'mvn archetype:generate'
             }
         }
     }
