@@ -10,7 +10,7 @@ pipeline {
             steps {
                echo "Hello this is jenkins pipeline"
                sh 'mkdir /tmp/hello'
-               sh 'mvn install'
+               sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
     }
