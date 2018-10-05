@@ -13,6 +13,7 @@ pipeline {
                 '''
             }
         }
+    }
     stages {
         stage ('Clone repository') {
             steps {
