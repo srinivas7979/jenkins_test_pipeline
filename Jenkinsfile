@@ -11,6 +11,6 @@ pipeline {
                echo "Hello this is jenkins pipeline"
                mkdir hello
             }
-        
+        }
     }
 }
