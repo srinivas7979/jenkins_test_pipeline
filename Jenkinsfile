@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                echo "Hello this is jenkins pipeline"
-                sh 'cd "${WORKSPCE}/1.0"' 
+                sh 'cd "${env.WORKSPCE}/1.0"' 
                sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
