@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                echo "Hello this is jenkins pipeline"
-               mkdir hello
+               mkdir "/tmp/hello"
             }
         }
     }
