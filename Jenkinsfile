@@ -9,7 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                echo "Hello this is jenkins pipeline"
-               sh 'mkdir /tmp/hello'
+               def mvn_version = 'MY_MVN'
+               withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
                sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
