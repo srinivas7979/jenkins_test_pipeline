@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                echo "Hello this is jenkins pipeline"
-               def mvn_version = 'MY_MVN'
+               def mvn_version = '/opt/apache-maven-3.5.3'
                withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
                sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
